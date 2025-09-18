@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Configuration
-st.set_page_config(page_title="Wordle en Streamlit", layout="centered")
+st.set_page_config(page_title="Trouve le mot pour avoir l'indice final", layout="centered")
 
 # Initialisation de la session
 if "authenticated" not in st.session_state:
