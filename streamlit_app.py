@@ -21,7 +21,7 @@ st.title("🔐 Wordle en Streamlit")
 
 # --- Authentification ---
 if not st.session_state.authenticated:
-    pwd = st.text_input("Entrez le lieu indiqué par la suite de numéros :", type="password").lower()
+    pwd = st.text_input("Entrez le lieu indiqué par la suite de numéros (ex: cuisine):", type="password").lower()
     if st.button("Se connecter"):
         if pwd == APP_PASSWORD:
             st.session_state.authenticated = True
