@@ -21,13 +21,13 @@ st.title("🔐 Wordle en Streamlit")
 
 # --- Authentification ---
 if not st.session_state.authenticated:
-    pwd = st.text_input("Entrez le mot de passe pour accéder au jeu :", type="password")
+    pwd = st.text_input("Entrez le mot de passe pour accéder au jeu :", type="password").lower()
     if st.button("Se connecter"):
         if pwd == APP_PASSWORD:
             st.session_state.authenticated = True
-            st.success("Connexion réussie ✅")
+            st.success("Bien joué, tu as trouvé le mot !  ✅")
         else:
-            st.error("Mot de passe incorrect ❌")
+            st.error("Nan ce n'est pas ça, il faut trouver l'endroit indiqué par l'énigme précédente ❌")
 
 else:
     st.subheader("Bienvenue dans le jeu 🎮")
